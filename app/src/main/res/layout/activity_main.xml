@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="proyectopersonal.alarma.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiempo Actual"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtHoraActual"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="sssssssdss"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtHoraActual"
+        android:layout_alignParentStart="true">
+
+    </Spinner>
+
+
+    <TextView
+        android:id="@+id/TimeZone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="sssssssssssssssssssssssssss"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/txtTimeZone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2222222"
+        android:layout_below="@+id/TimeZone"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp" />
+
+    <TimePicker
+        android:id="@+id/alarmTimePicker"
+        android:layout_width="353dp"
+        android:layout_height="336dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_above="@+id/alarmText"
+        android:layout_centerHorizontal="true"
+        android:numbersTextColor="#000000"
+        android:numbersBackgroundColor="#5772f5ee"
+        android:numbersSelectorColor="#14c346"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Iniciar Alarma"
+        android:id="@+id/start_alarma"
+        android:onClick="startTimer"
+        app:layout_constraintTop_toBottomOf="@+id/alarmText"
+        android:layout_marginLeft="63dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/alarmText"
+        android:textSize="8dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Tono de Alarma"
+        android:id="@+id/stop_alarm"
+        android:onClick="cancelTimer"
+        app:layout_constraintTop_toBottomOf="@+id/alarmText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/start_alarma"
+        android:layout_marginLeft="80dp"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/alarmTimePicker"
+        android:layout_marginEnd="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/alarmText"
+        app:layout_constraintTop_toBottomOf="@+id/alarmTimePicker"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:textSize="8dp"/>
+
+
+
+
+</RelativeLayout>
